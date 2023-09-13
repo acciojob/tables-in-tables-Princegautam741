@@ -1,62 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables in Tables</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <table>
-        <tr>
-            <td>
-                <!-- Main Table -->
-                <table border="1">
-                    <tr>
-                        <th colspan="2">Main Table</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <!-- Nested Table 1 -->
-                            <table border="1">
-                                <tr>
-                                    <th colspan="2">Nested Table 1</th>
-                                </tr>
-                                <tr>
-                                    <td>List item 1</td>
-                                </tr>
-                                <tr>
-                                    <td>List item 2</td>
-                                </tr>
-                                <tr>
-                                    <td>List item 3</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <!-- Nested Table 2 -->
-                            <table border="1">
-                                <tr>
-                                    <th colspan="2">Nested Table 2</th>
-                                </tr>
-                                <tr>
-                                    <th>Column 1</th>
-                                    <th>Column 2</th>
-                                </tr>
-                                <tr>
-                                    <td>Row 1, Col 1</td>
-                                    <td>Row 1, Col 2</td>
-                                </tr>
-                                <tr>
-                                    <td>Row 2, Col 1</td>
-                                    <td>Row 2, Col 2</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-</html>
+    <form method="post" action="submit.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="gender_m" name="gender" value="Male" required>
+        <label for="gender_m">Male</label>
+        <input type="radio" id="gender_f" name="gender" value="Female" required>
+        <label for="gender_f">Female</label>
+
+        <label for="cars">Car Brands:</label>
+        <select id="cars" name="cars" required>
+            <option value="" disabled selected>--Please choose an option--</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+
+        <label for="dob">DOB:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="tos">I agree to the TOS:</label>
+        <input type="checkbox" id="tos" name="tos" required>
+
+        <button type="submit">Submit</button>
+    </form>
