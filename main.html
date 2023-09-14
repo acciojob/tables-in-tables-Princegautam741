@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables in Tables</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS for styling */
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        td.black-cell {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <table>
@@ -53,7 +66,7 @@
                                 </tr>
                                 <!-- Add a cell with black background and white text -->
                                 <tr>
-                                    <td colspan="2" style="background-color: black; color: white;">HTML</td>
+                                    <td colspan="2" class="black-cell">HTML</td>
                                 </tr>
                             </table>
                         </td>
